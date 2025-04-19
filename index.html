@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mutual Fund Research Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#" onclick="scrollToSearch()">Home</a></li>
+            <li><a href="compare.html">Compare</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Search Bar Section -->
+    <div id="searchSection" class="search-container">
+        <h2>Search for Mutual Funds</h2>
+        <input type="text" id="searchBar" placeholder="Enter Mutual Fund Name" oninput="suggestFunds(this.value.trim())">
+        <div id="suggestions"></div>
+        <button onclick="fetchFundDetails()">Search</button>
+    </div>
+
+    <!-- New Content Section -->
+    <div class="info-section feature">
+        <h2>🔍 Key Features</h2>
+        <ul>
+            <li>Mutual Fund Research</li>
+            <li>Mutual Fund Comparison</li>
+            <li>Interactive Data Visualization</li>
+            <li>Real-Time API Integration</li>
+            <li>Smart Search & Suggestions</li>
+            <li>User-Friendly Interface</li>
+        </ul>
+    </div>
+    
+    <div class="info-section comparison">
+        <h2>📊 Mutual Fund Comparison Tool</h2>
+        <p>With this tool, you can:</p>
+        <ul>
+            <li>Compare historical performance of multiple funds side by side using visualization</li>
+            <li>Analyze financial metrics with interactive charts.</li>
+            <li>Identify top-performing funds based on key indicators.</li>
+        </ul>
+    </div>
+    
+
+    <div class="start-exploring">
+        🚀 <strong>Start exploring today and optimize your investment strategy!</strong>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

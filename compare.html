@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Mutual Funds</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="compare.js" defer></script>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="compare.html">Compare</a></li>
+            <li><a href="about.html">About</a></li>
+
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Compare Mutual Funds</h1>
+
+        <!-- Input Section -->
+        <div id="compareSection">
+            <h3>Enter Mutual Funds to Compare</h3>
+            <input type="text" id="compareSearch" placeholder="Enter Mutual Fund Name" oninput="suggestCompareFunds(this.value.trim())">
+            <div id="compareSuggestions"></div>
+            <button onclick="addFund()">Add</button>
+        </div>
+
+        <!-- Selected Funds List -->
+        <div id="selectedFunds">
+            <h3>Selected Funds</h3>
+            <ul id="fundList"></ul>
+        </div>
+
+        <!-- Compare Button -->
+        <button id="compareButton" onclick="compareFunds()">Compare</button>
+
+        <!-- Chart Section -->
+        <div id="chartContainer"></div>
+    </div>
+
+    <script src="compare.js"></script>
+</body>
+</html>
